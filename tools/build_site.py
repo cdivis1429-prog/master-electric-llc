@@ -188,7 +188,7 @@ def service_cards():
 
 TAGLINE = "Done right. No callbacks."
 
-TRUST = '<div class="trust-row"><span>Faith-driven &amp; family-owned</span><span>Licensed &amp; insured</span><span>20+ years in the trade</span><span>Permits &amp; inspections handled</span><span>OSHA 30 &amp; NFPA 70E trained</span></div>'
+TRUST = '<div class="trust-row"><span>Faith-driven &amp; family-owned</span><span>Licensed &amp; insured</span><span>20+ years in the trade</span><span>Permits &amp; inspections handled</span><span>Colorado Master Electrician</span></div>'
 
 
 # ---------------------------------------------------------------- Home
@@ -428,7 +428,7 @@ def build_services():
     <h2>For business owners</h2>
     <p>Need a reliable electrician for your shop, office, warehouse or restaurant? We handle repairs, added circuits and equipment, lighting upgrades and troubleshooting.</p>
     <h2>Safety and credentials</h2>
-    <p>Our team is OSHA 30, OSHA 10 and NFPA 70E trained. Colorado Electrical Contractor #{LICENSE}. Certificates of insurance are available on request.</p>
+    <p>Owned by a Colorado Master Electrician (ME.3001269). Colorado Electrical Contractor #{LICENSE}. Certificates of insurance are available on request.</p>
   </div>
   <div>
     <img src="/img/commercial-restaurant-bar-lighting.jpg" alt="Restaurant serving bar with feature ceiling and lighting wired by Master Electric" loading="lazy" style="aspect-ratio:4/3;object-fit:cover;width:100%">
@@ -541,10 +541,10 @@ def build_about():
     <h2>Faith-driven. Family-owned.</h2>
     <p>Master Electric is a family-owned company built on faith in Jesus Christ. For us, that isn't about religion. It's about following Him in how we work: being honest about what a job needs and what it will cost, keeping our word, and treating every home and jobsite with respect.</p>
     <p>We try to do every job as if we were doing it for the Lord, not just for a paycheck. That's where "Done right. No callbacks." comes from.</p>
-    <h2>Safety and training</h2>
+    <h2>Licensing and training</h2>
     <ul class="checklist">
-      <li>NFPA 70E electrical safety trained</li>
-      <li>OSHA 30 and OSHA 10 certified team</li>
+      <li>Colorado Master Electrician, license ME.3001269</li>
+      <li>Current on Colorado continuing education, including the 2026 NEC update</li>
       <li>Licensed Colorado electrical contractor #{LICENSE}</li>
       <li>Insured, with certificates available on request</li>
     </ul>
