@@ -5,7 +5,7 @@ Live at https://masterelectricdenver.com (GitHub Pages, custom domain).
 ## Structure
 - `site/` — the live website: plain HTML/CSS, one file per page. This folder is what gets published.
 - `tools/build_site.py` — generates every page in `site/` from one place (shared header, footer, SEO tags, sitemap). Edit content there and run `python3 tools/build_site.py`.
-- `src/`, `public/` — the previous React version, kept for reference (no longer deployed).
+- The previous React version was removed in Nov 2026; it is still in the git history if ever needed.
 
 ## Deploy
 ```

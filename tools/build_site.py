@@ -15,6 +15,7 @@ EMAIL = "masterelectricllc@outlook.com"
 WEB3FORMS_KEY = "f6d660bf-8cb6-4e6b-89b0-79c853fcf957"  # public form key (Web3Forms), safe to commit
 LICENSE = "EC.0103012"
 GOOGLE_REVIEWS = "https://g.co/kgs/PxdCw6w"
+REVIEW_LINK = "https://g.page/r/CQb5gqDPYuRGEAE/review"  # opens the "write a review" box
 AREAS = ["Aurora", "Denver", "Centennial", "Parker", "Englewood", "Littleton",
          "Lakewood", "Greenwood Village", "Highlands Ranch", "Castle Rock"]
 
@@ -108,6 +109,7 @@ def footer():
       <li><a href="mailto:{EMAIL}">✉️ {EMAIL}</a></li>
       <li><a href="/contact.html">Request a quote</a></li>
       <li><a href="{GOOGLE_REVIEWS}" target="_blank" rel="noopener">Google reviews</a></li>
+      <li><a href="{REVIEW_LINK}" target="_blank" rel="noopener">⭐ Leave us a review</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom"><span>© {year} Master Electric, LLC. All rights reserved.</span><span>Aurora, Colorado</span></div>
@@ -177,7 +179,7 @@ def reviews_html(n=4):
   <div class="center"><span class="eyebrow">Reviews</span><h2>What our customers say</h2>
   <p class="lead">Most of our work comes from referrals and repeat customers.</p></div>
   <div class="grid grid-2" style="margin-top:28px">{cards}</div>
-  <div class="center btn-row" style="justify-content:center"><a class="btn btn-dark" href="{GOOGLE_REVIEWS}" target="_blank" rel="noopener">Read more on Google</a><a class="btn btn-outline" href="{GOOGLE_REVIEWS}" target="_blank" rel="noopener">Leave us a review</a></div>
+  <div class="center btn-row" style="justify-content:center"><a class="btn btn-dark" href="{GOOGLE_REVIEWS}" target="_blank" rel="noopener">Read more on Google</a><a class="btn btn-outline" href="{REVIEW_LINK}" target="_blank" rel="noopener">Leave us a review</a></div>
 </div></section>'''
 
 
@@ -605,6 +607,7 @@ def build_contact():
   <h1>Thanks — we got your request!</h1>
   <p class="lead">We'll get back to you soon. For anything urgent, call or text <a href="tel:{TEL}">{PHONE}</a>.</p>
   <a class="btn btn-dark" href="/">Back to home</a>
+  <p style="margin-top:28px;color:var(--muted)">Worked with us before? <a href="{REVIEW_LINK}" target="_blank" rel="noopener">Leave us a Google review ⭐</a></p>
 </div></section>'''
     page("thank-you.html", "Thank You | Master Electric, LLC", "Thanks for contacting Master Electric.", body)
     body = f'''<section class="section"><div class="wrap center" style="max-width:700px">
@@ -625,6 +628,13 @@ def build_seo_files(urls):
     with open(os.path.join(ROOT, "CNAME"), "w") as f:
         f.write("masterelectricdenver.com\n")
     open(os.path.join(ROOT, ".nojekyll"), "w").close()
+    # Short link to text customers: masterelectricdenver.com/review -> Google "write a review" box
+    with open(os.path.join(ROOT, "review.html"), "w") as f:
+        f.write(f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Review Master Electric on Google</title>
+<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url={REVIEW_LINK}">
+<link rel="canonical" href="{REVIEW_LINK}"></head><body style="font-family:sans-serif;text-align:center;padding:40px">
+<p>Taking you to Google to leave a review for Master Electric...</p><p><a href="{REVIEW_LINK}">Tap here if it doesn't open</a></p>
+<script>location.replace("{REVIEW_LINK}")</script></body></html>''')
     # Google Search Console ownership verification - do not remove
     with open(os.path.join(ROOT, "googleff62fdcd4ed4133d.html"), "w") as f:
         f.write("google-site-verification: googleff62fdcd4ed4133d.html")
