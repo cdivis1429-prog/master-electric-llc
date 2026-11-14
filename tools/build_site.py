@@ -242,7 +242,7 @@ def build_home():
   <div class="grid grid-3" style="margin-top:28px">
     <div class="card photo-card"><img src="/img/electrical-panel-install.jpg" alt="New electrical panel and disconnect installation" loading="lazy"><div class="body"><h3>Panel &amp; service work</h3><p>Clean, labeled panel installs and service upgrades.</p></div></div>
     <div class="card photo-card"><img src="/img/commercial-led-lighting.jpg" alt="Custom LED lighting in a commercial space" loading="lazy"><div class="body"><h3>Commercial lighting</h3><p>Custom LED and lighting control for businesses.</p></div></div>
-    <div class="card photo-card"><img src="/img/restaurant-lighting.jpg" alt="Restaurant lighting installation" loading="lazy"><div class="body"><h3>Restaurant &amp; retail</h3><p>Tenant improvements and remodels for national brands.</p></div></div>
+    <div class="card photo-card"><img src="/img/commercial-restaurant-bar-lighting.jpg" alt="Restaurant serving bar with feature ceiling and lighting" loading="lazy"><div class="body"><h3>Restaurant &amp; retail</h3><p>Tenant improvements and remodels for national brands.</p></div></div>
   </div>
 </div></section>
 
@@ -397,12 +397,23 @@ def build_services():
     <p>Our team is OSHA 30, OSHA 10 and NFPA 70E trained. Colorado Electrical Contractor #{LICENSE}. Certificates of insurance are available on request.</p>
   </div>
   <div>
-    <img src="/img/restaurant-lighting.jpg" alt="Restaurant lighting installed by Master Electric" loading="lazy">
-    <div class="grid grid-2" style="margin-top:16px"><img src="/img/commercial-led-lighting.jpg" alt="Commercial LED lighting" loading="lazy" style="border-radius:12px;aspect-ratio:1;object-fit:cover"><img src="/img/lighting-control-panel.jpg" alt="Lighting control panel wiring" loading="lazy" style="border-radius:12px;aspect-ratio:1;object-fit:cover"></div>
+    <img src="/img/commercial-restaurant-bar-lighting.jpg" alt="Restaurant serving bar with feature ceiling and lighting wired by Master Electric" loading="lazy" style="aspect-ratio:4/3;object-fit:cover;width:100%">
     <div class="contact-box" style="margin-top:24px">
       <h3>Invite us to bid</h3>
       <p>Send plans and your bid date to <a href="mailto:{EMAIL}">{EMAIL}</a> or call <a href="tel:{TEL}">{PHONE}</a>.</p>
     </div>
+  </div>
+</div></section>
+<section class="section alt"><div class="wrap">
+  <div class="center"><span class="eyebrow">Recent commercial work</span><h2>From rough-in to final trim</h2>
+  <p class="lead">A look at recent commercial projects, from framing-stage rough-in to finished lighting and rooftop equipment.</p></div>
+  <div class="grid grid-3 gallery" style="margin-top:28px">
+    <figure><img src="/img/commercial-dining-pendant-lighting.jpg" alt="Dining room with drum pendant lighting and cove lighting" loading="lazy"><figcaption>Dining room pendants and cove lighting</figcaption></figure>
+    <figure><img src="/img/commercial-lobby-ceiling-lighting.jpg" alt="Lobby and lounge with large drum ceiling fixtures" loading="lazy"><figcaption>Lobby and lounge ceiling fixtures</figcaption></figure>
+    <figure><img src="/img/commercial-metal-stud-rough-in.jpg" alt="Electrical rough-in in a metal-stud commercial build-out" loading="lazy"><figcaption>Rough-in during a commercial build-out</figcaption></figure>
+    <figure><img src="/img/commercial-rooftop-unit-disconnect.jpg" alt="Rooftop HVAC unit with new disconnect and wiring" loading="lazy"><figcaption>Rooftop unit power and disconnects</figcaption></figure>
+    <figure><img src="/img/commercial-exterior-wall-sconce.jpg" alt="Exterior wall sconce on a commercial building" loading="lazy"><figcaption>Exterior building lighting</figcaption></figure>
+    <figure><img src="/img/electrical-panel-install.jpg" alt="New electrical panel and disconnect installation" loading="lazy"><figcaption>Panels and power distribution</figcaption></figure>
   </div>
 </div></section>
 '''
