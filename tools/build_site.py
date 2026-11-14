@@ -234,7 +234,7 @@ def build_home():
     </ul>
     <a class="btn btn-dark" href="/basement-electrical.html">Basement electrical details →</a>
   </div>
-  <img src="/img/kitchen-remodel-range-hood.jpg" alt="Kitchen remodel with new range, hood and lighting wired by Master Electric" width="900" height="823" loading="lazy">
+  <img src="/img/basement-feature-wall-led-shelves.jpg" alt="Basement finish with LED shelf lighting and recessed cans wired by Master Electric" width="1100" height="825" loading="lazy">
 </div></section>
 
 <section class="section alt"><div class="wrap">
@@ -263,7 +263,15 @@ def build_home():
 
 
 # ---------------------------------------------------------------- Service pages
-def service_page(filename, h1, title, desc, intro, photo, photo_alt, bullets, sections, faqs, crumb):
+def gallery_html(items, eyebrow, heading):
+    figs = "".join(f'<figure><img src="/img/{i}" alt="{E(c)}" loading="lazy"><figcaption>{E(c)}</figcaption></figure>' for i, c in items)
+    return f'''<section class="section alt"><div class="wrap">
+  <div class="center"><span class="eyebrow">{eyebrow}</span><h2>{heading}</h2></div>
+  <div class="grid grid-3 gallery" style="margin-top:28px">{figs}</div>
+</div></section>'''
+
+
+def service_page(filename, h1, title, desc, intro, photo, photo_alt, bullets, sections, faqs, crumb, gallery=None):
     secs = "".join(f"<h2>{E(h)}</h2>{p}" for h, p in sections)
     others = "".join(f'<li><a href="/{h}">{t}</a></li>' for h, t, _, _ in SERVICES if h != filename)
     body = f'''<section class="page-hero"><div class="wrap">
@@ -290,7 +298,8 @@ def service_page(filename, h1, title, desc, intro, photo, photo_alt, bullets, se
     <div style="margin-top:24px"><h3>Other services</h3><ul>{others}</ul></div>
   </div>
 </div></section>
-<section class="section alt"><div class="wrap" style="max-width:860px">
+{gallery or ""}
+<section class="section"><div class="wrap" style="max-width:860px">
   <h2 class="center">Common questions</h2>
   {faq_html(faqs)}
 </div></section>
@@ -307,7 +316,7 @@ def build_services():
         "Basement Finish Electrician | Aurora & Denver | Master Electric",
         "Licensed electrician for basement finishes in Aurora, Denver and the Denver Metro. Lighting, circuits, permits and inspections. Free estimates: 720-456-1384.",
         "Finishing a basement? We handle the complete electrical: layout, permit, rough-in, inspections and trim-out. We work directly with homeowners and alongside basement finishing companies and remodelers.",
-        "kitchen-pendant-lighting.jpg", "Finished lighting installed by Master Electric",
+        "basement-finished-room-chandelier.jpg", "Finished basement room with chandelier and recessed lighting wired by Master Electric",
         ["Lighting and outlet layout planned with you", "Electrical permit pulled and inspections scheduled",
          "Recessed LED lighting, dimmers and switches", "Bedroom, bathroom, bar, office and media room circuits",
          "AFCI/GFCI protection and smoke/CO detectors to current code", "Subpanels or panel upgrades if your panel is full",
@@ -320,14 +329,22 @@ def build_services():
          ("How long does basement electrical take?", "Rough-in for a typical basement takes a few days, then trim-out takes a day or two after drywall. Inspection scheduling with the city is usually the biggest variable."),
          ("Will my panel have room for a finished basement?", "Often yes, but not always. We check your panel's capacity and open spaces during the walkthrough and will tell you up front if you need a subpanel or upgrade."),
          ("Do you work with my contractor or basement company?", "Yes. We regularly work as the electrical subcontractor for basement finishers and remodelers, and we also work directly for homeowners.")],
-        "Basement Finish Electrical")
+        "Basement Finish Electrical",
+        gallery=gallery_html([
+            ("basement-framing-rough-in.jpg", "Framing stage, ready for electrical rough-in"),
+            ("basement-feature-wall-led-shelves.jpg", "Feature wall with LED shelf lighting and recessed cans"),
+            ("basement-led-shelf-lighting.jpg", "Built-in shelves with LED strip lighting"),
+            ("basement-wet-bar-recessed-lighting.jpg", "Wet bar with recessed lighting and appliance circuits"),
+            ("basement-led-mirror-wall.jpg", "Home gym with backlit LED mirrors and TV wall"),
+            ("basement-finished-room-chandelier.jpg", "Finished room with chandelier and dimmable lighting"),
+        ], "Recent basement work", "From framing to finished space"))
 
     service_page(
         "remodel-electrical.html", "Kitchen & Bathroom Remodel Electrical",
         "Kitchen & Bath Remodel Electrician | Aurora & Denver | Master Electric",
         "Electrical for kitchen and bathroom remodels in Aurora and the Denver Metro: lighting, appliance circuits, hoods and code updates. Call 720-456-1384.",
         "Remodels usually mean new lighting, new appliance circuits and bringing older wiring up to code. We coordinate with your contractor or work directly with you to get it done right and inspected.",
-        "kitchen-remodel-range-hood.jpg", "Kitchen remodel with new range and hood wiring",
+        "bath-vanity-sconce-wallpaper.jpg", "Bathroom remodel with new vanity sconce lighting",
         ["Recessed, pendant and under-cabinet lighting", "Dedicated circuits for ranges, ovens, microwaves and dishwashers",
          "Range hood and exhaust fan wiring", "GFCI and AFCI protection to current code",
          "Island and peninsula outlets", "Bathroom fans, heated floors, vanity lighting and lighted mirrors",
@@ -337,7 +354,15 @@ def build_services():
         [("Do kitchen remodels need a permit?", "Most kitchen and bathroom remodels that add or change circuits require an electrical permit. We handle permits and inspections."),
          ("Can you update the wiring in an older home during a remodel?", "Yes. Remodels are the best time to replace outdated wiring, add grounding and GFCI protection, and add circuits for modern appliances."),
          ("Do you work with general contractors?", "Yes. We work with remodelers and general contractors as their electrical sub, and directly with homeowners.")],
-        "Kitchen & Bath Remodels")
+        "Kitchen & Bath Remodels",
+        gallery=gallery_html([
+            ("bath-remodel-vanity-mirror.jpg", "Bathroom remodel: vanity lighting, recessed cans and exhaust fan"),
+            ("bath-shower-lighting.jpg", "Shower with recessed lighting and fan"),
+            ("bath-powder-room-wallpaper.jpg", "Powder room remodel with new lighting"),
+            ("kitchen-remodel-range-hood.jpg", "Kitchen remodel: range, hood and lighting circuits"),
+            ("kitchen-pendant-lighting.jpg", "Kitchen pendant lighting over the island"),
+            ("bath-remodel-shower-fan.jpg", "Full bathroom remodel, wired to code"),
+        ], "Recent remodels", "Kitchens and bathrooms we've wired"))
 
     service_page(
         "panel-upgrades.html", "Electrical Panel Upgrades, EV Chargers & Surge Protection",
