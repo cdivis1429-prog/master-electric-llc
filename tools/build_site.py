@@ -98,7 +98,7 @@ def footer():
   <div class="footer-grid">
     <div>
       <img src="/img/logo.png" alt="" width="64" height="64" style="margin-bottom:12px">
-      <p><strong style="color:#fff">Master Electric, LLC</strong><br><em style="color:var(--gold);font-style:normal;font-weight:700">{TAGLINE}</em><br>Residential and commercial electrical contractor based in Aurora, CO, serving the Denver Metro area.</p>
+      <p><strong style="color:#fff">Master Electric, LLC</strong><br><em style="color:var(--gold);font-style:normal;font-weight:700">{TAGLINE}</em><br>Faith-driven. Family-owned.<br>Residential and commercial electrical contractor based in Aurora, CO, serving the Denver Metro area.</p>
       <p>Colorado Electrical Contractor #{LICENSE}</p>
     </div>
     <div><h3>Services</h3><ul>{svc}</ul></div>
@@ -188,7 +188,7 @@ def service_cards():
 
 TAGLINE = "Done right. No callbacks."
 
-TRUST = '<div class="trust-row"><span>Licensed &amp; insured</span><span>20+ years in the trade</span><span>Permits &amp; inspections handled</span><span>OSHA 30 &amp; NFPA 70E trained</span></div>'
+TRUST = '<div class="trust-row"><span>Faith-driven &amp; family-owned</span><span>Licensed &amp; insured</span><span>20+ years in the trade</span><span>Permits &amp; inspections handled</span><span>OSHA 30 &amp; NFPA 70E trained</span></div>'
 
 
 # ---------------------------------------------------------------- Home
@@ -538,6 +538,9 @@ def build_about():
     <h2>Local, licensed and hands-on</h2>
     <p>Master Electric, LLC is a licensed Colorado electrical contractor (#{LICENSE}) serving the Denver Metro area. With more than 20 years in the electrical trade, we handle residential work, including basement finishes, remodels, panel upgrades and repairs, along with commercial tenant improvements and service.</p>
     <p>When you call, you talk to the owner. We give clear written estimates, pull the permits, and stay with the job until it passes inspection.</p>
+    <h2>Faith-driven. Family-owned.</h2>
+    <p>Master Electric is a family-owned company built on faith in Jesus Christ. For us, that isn't about religion. It's about following Him in how we work: being honest about what a job needs and what it will cost, keeping our word, and treating every home and jobsite with respect.</p>
+    <p>We try to do every job as if we were doing it for the Lord, not just for a paycheck. That's where "Done right. No callbacks." comes from.</p>
     <h2>Safety and training</h2>
     <ul class="checklist">
       <li>NFPA 70E electrical safety trained</li>
