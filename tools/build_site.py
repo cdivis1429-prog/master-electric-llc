@@ -14,7 +14,6 @@ TEL = "+17204561384"
 EMAIL = "masterelectricllc@outlook.com"
 LICENSE = "EC.0103012"
 GOOGLE_REVIEWS = "https://g.co/kgs/PxdCw6w"
-YELP = "https://www.yelp.com/biz/master-electric-aurora-2"
 AREAS = ["Aurora", "Denver", "Centennial", "Parker", "Englewood", "Littleton",
          "Lakewood", "Greenwood Village", "Highlands Ranch", "Castle Rock"]
 
@@ -57,7 +56,7 @@ def business_schema():
         "address": {"@type": "PostalAddress", "addressLocality": "Aurora",
                     "addressRegion": "CO", "addressCountry": "US"},
         "areaServed": [{"@type": "City", "name": a + ", CO"} for a in AREAS],
-        "sameAs": [YELP, GOOGLE_REVIEWS],
+        "sameAs": [GOOGLE_REVIEWS],
         "priceRange": "$$",
     }
 
@@ -108,7 +107,6 @@ def footer():
       <li><a href="mailto:{EMAIL}">✉️ {EMAIL}</a></li>
       <li><a href="/contact.html">Request a quote</a></li>
       <li><a href="{GOOGLE_REVIEWS}" target="_blank" rel="noopener">Google reviews</a></li>
-      <li><a href="{YELP}" target="_blank" rel="noopener">Yelp</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom"><span>© {year} Master Electric, LLC. All rights reserved.</span><span>Aurora, Colorado</span></div>
