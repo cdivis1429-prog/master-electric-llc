@@ -12,6 +12,7 @@ DOMAIN = "https://masterelectricdenver.com"
 PHONE = "720-456-1384"
 TEL = "+17204561384"
 EMAIL = "masterelectricllc@outlook.com"
+WEB3FORMS_KEY = "f6d660bf-8cb6-4e6b-89b0-79c853fcf957"  # public form key (Web3Forms), safe to commit
 LICENSE = "EC.0103012"
 GOOGLE_REVIEWS = "https://g.co/kgs/PxdCw6w"
 AREAS = ["Aurora", "Denver", "Centennial", "Parker", "Englewood", "Littleton",
@@ -564,11 +565,12 @@ def build_contact():
   <p class="lead">Call or text for the fastest answer, or send us the details below and we'll get back to you.</p>
 </div></section>
 <section class="section"><div class="wrap split" style="align-items:start">
-  <form class="form" action="https://formsubmit.co/{EMAIL}" method="POST">
-    <input type="hidden" name="_subject" value="New quote request from masterelectricdenver.com">
-    <input type="hidden" name="_next" value="{DOMAIN}/thank-you.html">
-    <input type="hidden" name="_template" value="table">
-    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <form class="form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
+    <input type="hidden" name="subject" value="New quote request from masterelectricdenver.com">
+    <input type="hidden" name="from_name" value="Master Electric website">
+    <input type="hidden" name="redirect" value="{DOMAIN}/thank-you.html">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
     <div class="row2">
       <div><label for="name">Name *</label><input id="name" name="name" required autocomplete="name"></div>
       <div><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>

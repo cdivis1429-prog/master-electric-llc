@@ -15,4 +15,4 @@ npm run deploy     # publishes site/ to the gh-pages branch
 Changes show up on masterelectricdenver.com within a few minutes.
 
 ## Contact form
-The quote form posts to FormSubmit (formsubmit.co), which emails submissions to masterelectricllc@outlook.com. The very first submission triggers a one-time confirmation email to that inbox — click "Activate" in it and the form works from then on.
+The quote form posts to Web3Forms (web3forms.com, free plan, 250 submissions/month), which emails submissions to masterelectricllc@outlook.com. The access key is `WEB3FORMS_KEY` in `tools/build_site.py`; it is public by design. After sending, visitors are redirected to thank-you.html.
