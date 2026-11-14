@@ -1,6 +1,6 @@
 {
   "name": "master-electric-llc",
-  "homepage": "https://jaredseefried.github.io",
+  "homepage": "https://masterelectricdenver.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,12 +21,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "npm run add-domain && gh-pages -d build",
-    "add-domain": "echo \"masterelectricdenver.com\" > build/CNAME",
+    "deploy": "gh-pages -d site --dotfiles",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "bd": "npm run build && npm run deploy"
+    "build-site": "python3 tools/build_site.py"
   },
   "eslintConfig": {
     "extends": [
