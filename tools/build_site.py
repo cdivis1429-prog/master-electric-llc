@@ -369,7 +369,7 @@ def build_services():
         "Panel Upgrade Electrician | Aurora & Denver | Master Electric",
         "Electrical panel replacements, service upgrades, subpanels, EV charger installs and whole-home surge protection in Aurora and the Denver Metro. Call 720-456-1384.",
         "An outdated or full panel limits what you can add to your home. We replace panels, upgrade service, add subpanels and install EV chargers and surge protection, all permitted and inspected.",
-        "electrical-panel-install.jpg", "New electrical panel installation",
+        "service-exterior-panel-meter.jpg", "Exterior meter and new panel installed by Master Electric",
         ["Panel replacements and service upgrades", "Subpanels for basements, garages and additions",
          "Level 2 EV charger installation", "Whole-home surge protection", "Breaker replacement and installation",
          "Grounding and bonding corrections", "Aluminum wiring repair and rewires", "Coordination with Xcel Energy when needed"],
@@ -385,9 +385,9 @@ def build_services():
         "Electrical Repair & Troubleshooting | Aurora & Denver | Master Electric",
         "Electrician for repairs and troubleshooting in Aurora and the Denver Metro: dead outlets, tripping breakers, lighting, fans and smoke detectors. Call 720-456-1384.",
         "Something not working? We find the problem and fix it, from a dead outlet or tripping breaker to new lights, fans and smoke detectors.",
-        "panel-wiring.jpg", "Electrician troubleshooting wiring inside a panel",
+        "repair-burned-receptacle.jpg", "Burned-out 240V receptacle found and replaced by Master Electric",
         ["Dead outlets and circuits", "Breakers that trip or won't reset", "Flickering or buzzing lights",
-         "Light fixture and ceiling fan installation", "Outlet and switch replacement, USB and smart switches",
+         "Light fixture and ceiling fan installation", "Outlet and switch replacement, USB and smart switches", "Hot tub, sauna and outdoor equipment hookups", "Underground feeds to garages, sheds and detached structures",
          "Smoke and carbon monoxide detector installation", "Exterior, landscape and garage lighting",
          "Rental property and pre-sale repairs"],
         [("Fast answers on small jobs",
@@ -395,7 +395,15 @@ def build_services():
         [("Do you do small jobs?", "Yes. We handle everything from one outlet or fixture to full remodels."),
          ("Do you work on rental properties?", "Yes. We work with landlords and property managers on repairs, turnovers and remodels."),
          ("What should I do if I smell burning or see sparks?", "Turn off the breaker for that circuit if it's safe to do so, and call us. If there's smoke or fire, call 911 first.")],
-        "Electrical Repair & Service")
+        "Electrical Repair & Service",
+        gallery=gallery_html([
+            ("repair-burned-receptacle.jpg", "Burned 240V receptacle found during a service call"),
+            ("repair-new-receptacle.jpg", "Replaced with a new receptacle, safe and to code"),
+            ("service-panel-breakers.jpg", "Panel troubleshooting and breaker replacement"),
+            ("service-subpanel-wiring.jpg", "Clean subpanel wiring for added circuits"),
+            ("service-outdoor-sauna-hookup.jpg", "Outdoor sauna and equipment hookup"),
+            ("service-underground-conduit-trench.jpg", "Underground conduit for a detached structure"),
+        ], "Recent service calls", "Problems found, fixed right"))
 
     # Commercial
     body = f'''<section class="page-hero"><div class="wrap">
