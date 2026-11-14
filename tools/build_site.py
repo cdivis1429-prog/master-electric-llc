@@ -625,6 +625,9 @@ def build_seo_files(urls):
     with open(os.path.join(ROOT, "CNAME"), "w") as f:
         f.write("masterelectricdenver.com\n")
     open(os.path.join(ROOT, ".nojekyll"), "w").close()
+    # Google Search Console ownership verification - do not remove
+    with open(os.path.join(ROOT, "googleff62fdcd4ed4133d.html"), "w") as f:
+        f.write("google-site-verification: googleff62fdcd4ed4133d.html")
 
 
 if __name__ == "__main__":
