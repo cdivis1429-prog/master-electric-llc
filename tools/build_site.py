@@ -90,14 +90,14 @@ def footer():
     cities = "".join(f'<li><a href="/{h}">Electrician in {c}</a></li>' for h, c in CITY_PAGES)
     year = datetime.date.today().year
     return f'''<section class="cta-band"><div class="wrap">
-  <div><h2>Ready to get your project wired right?</h2><p>Free estimates on basement finishes, remodels and panel upgrades.</p></div>
+  <div><h2>{TAGLINE}</h2><p>Free estimates on basement finishes, remodels and panel upgrades.</p></div>
   <div class="btn-row" style="margin:0"><a class="btn btn-primary" href="tel:{TEL}">📞 Call {PHONE}</a><a class="btn btn-outline" href="/contact.html">Request a Quote</a></div>
 </div></section>
 <footer class="site-footer"><div class="wrap">
   <div class="footer-grid">
     <div>
       <img src="/img/logo.png" alt="" width="64" height="64" style="margin-bottom:12px">
-      <p><strong style="color:#fff">Master Electric, LLC</strong><br>Residential and commercial electrical contractor based in Aurora, CO, serving the Denver Metro area.</p>
+      <p><strong style="color:#fff">Master Electric, LLC</strong><br><em style="color:var(--gold);font-style:normal;font-weight:700">{TAGLINE}</em><br>Residential and commercial electrical contractor based in Aurora, CO, serving the Denver Metro area.</p>
       <p>Colorado Electrical Contractor #{LICENSE}</p>
     </div>
     <div><h3>Services</h3><ul>{svc}</ul></div>
@@ -185,6 +185,8 @@ def service_cards():
     return cards
 
 
+TAGLINE = "Done right. No callbacks."
+
 TRUST = '<div class="trust-row"><span>Licensed &amp; insured</span><span>20+ years in the trade</span><span>Permits &amp; inspections handled</span><span>OSHA 30 &amp; NFPA 70E trained</span></div>'
 
 
@@ -192,7 +194,7 @@ TRUST = '<div class="trust-row"><span>Licensed &amp; insured</span><span>20+ yea
 def build_home():
     body = f'''<section class="hero"><div class="wrap">
   <div>
-    <span class="eyebrow">Aurora &amp; Denver Metro Electrician</span>
+    <p class="tagline">{TAGLINE}</p>
     <h1>Electrical for basement finishes, remodels &amp; panel upgrades</h1>
     <p class="lead">Master Electric is a licensed electrical contractor based in Aurora. We wire basements and remodels, upgrade panels and fix electrical problems for homeowners, builders and businesses across the Denver Metro.</p>
     <div class="btn-row"><a class="btn btn-primary" href="tel:{TEL}">📞 Call {PHONE}</a><a class="btn btn-outline" href="/contact.html">Get a Free Quote</a></div>

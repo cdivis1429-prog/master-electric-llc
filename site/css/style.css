@@ -169,3 +169,4 @@ details p{margin:12px 0 0}
 }
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:10px;top:10px;background:#fff;padding:8px;z-index:100}
+.tagline{display:inline-block;margin:0 0 14px;padding:6px 14px;border:2px solid var(--gold);border-radius:4px;color:var(--gold);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem}
