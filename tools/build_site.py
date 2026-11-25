@@ -15,6 +15,7 @@ EMAIL = "masterelectricllc@outlook.com"
 WEB3FORMS_KEY = "f6d660bf-8cb6-4e6b-89b0-79c853fcf957"  # public form key (Web3Forms), safe to commit
 LICENSE = "EC.0103012"
 GOOGLE_REVIEWS = "https://g.co/kgs/PxdCw6w"
+FACEBOOK = "https://www.facebook.com/people/Master-Electric-LLC/61593915543932/"
 REVIEW_LINK = "https://g.page/r/CQb5gqDPYuRGEAE/review"  # opens the "write a review" box
 AREAS = ["Aurora", "Denver", "Centennial", "Parker", "Englewood", "Littleton",
          "Lakewood", "Greenwood Village", "Highlands Ranch", "Castle Rock"]
@@ -58,7 +59,7 @@ def business_schema():
         "address": {"@type": "PostalAddress", "addressLocality": "Aurora",
                     "addressRegion": "CO", "addressCountry": "US"},
         "areaServed": [{"@type": "City", "name": a + ", CO"} for a in AREAS],
-        "sameAs": [GOOGLE_REVIEWS],
+        "sameAs": [GOOGLE_REVIEWS, FACEBOOK],
         "priceRange": "$$",
     }
 
@@ -110,6 +111,7 @@ def footer():
       <li><a href="/contact.html">Request a quote</a></li>
       <li><a href="{GOOGLE_REVIEWS}" target="_blank" rel="noopener">Google reviews</a></li>
       <li><a href="{REVIEW_LINK}" target="_blank" rel="noopener">⭐ Leave us a review</a></li>
+      <li><a href="{FACEBOOK}" target="_blank" rel="noopener">👍 Follow us on Facebook</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom"><span>© {year} Master Electric, LLC. All rights reserved.</span><span>Aurora, Colorado</span></div>
@@ -594,6 +596,7 @@ def build_contact():
     <p>Call or text:</p>
     <a class="big-phone" href="tel:{TEL}">{PHONE}</a>
     <p style="margin-top:18px">Email:<br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
+    <p>Facebook:<br><a href="{FACEBOOK}" target="_blank" rel="noopener">Master Electric LLC</a></p>
     <p>Based in Aurora, CO, serving the Denver Metro.</p>
     <p>Colorado Electrical Contractor #{LICENSE}</p>
     <p><strong>General contractors:</strong> send plans and bid dates to the email above.</p>
